@@ -4,7 +4,8 @@ import {TITLE_MAX_LENGTH,TITLE_MIN_LENGTH,
   mapHousingTypeToMinPrice, mapAmountRoomsToAmountGuests,MAX_PRICE,ERROR_TEXT_MAX_PRICE} from './constants.js' ;
 import {sendData} from './fetch.js';
 import {onShowSuccessMessage,onShowErrorMessage} from './messages.js';
-import {closePopup,resetMarker,resetFieldAddress} from './map.js';
+import {closePopup,resetMarker,resetFieldAddress,resetFilters} from './map.js';
+import {resetPhotos} from './photo.js';
 
 const uploadForm = document.querySelector('.ad-form');
 const fieldTitle = uploadForm.querySelector('#title');
@@ -102,6 +103,8 @@ function onResetAll () {
   closePopup();
   resetMarker();
   resetFieldAddress();
+  resetPhotos();
+  resetFilters();
 }
 
 resetButton.addEventListener('click',onResetAll);

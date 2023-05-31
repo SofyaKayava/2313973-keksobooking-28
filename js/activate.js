@@ -25,4 +25,4 @@ function activateFilters () {
 }
 
 inactivateWebPage();
-export {activiteWebPage,inactivateWebPage,activateFilters};
+export {activiteWebPage,inactivateWebPage,activateFilters,mapFilter};
